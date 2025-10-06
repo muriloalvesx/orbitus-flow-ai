@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "@/hooks/use-toast";
-import { CheckCircle2, Rocket } from "lucide-react";
+import { CheckCircle2, Rocket, MessageCircle } from "lucide-react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -141,10 +141,29 @@ const ContactForm = () => {
               />
             </div>
 
-            <Button type="submit" size="xl" variant="hero" className="w-full group">
-              <CheckCircle2 className="mr-2 h-5 w-5" />
-              Quero Agendar Minha Avaliação Gratuita
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button type="submit" size="xl" variant="hero" className="flex-1 group">
+                <CheckCircle2 className="mr-2 h-5 w-5" />
+                Agendar Avaliação
+              </Button>
+              
+              <Button 
+                type="button" 
+                size="xl" 
+                variant="gradient" 
+                className="flex-1 group"
+                asChild
+              >
+                <a 
+                  href="https://wa.me/551231974778?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consultoria%20gratuita!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp Direto
+                </a>
+              </Button>
+            </div>
 
             <p className="text-sm text-muted-foreground text-center">
               Ao enviar este formulário, você concorda em ser contatado pela Orbitus Corp.

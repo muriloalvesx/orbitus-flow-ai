@@ -1,4 +1,5 @@
 import { Target, Zap, Shield } from "lucide-react";
+import aiAgentsImage from "@/assets/ai-agents-work.jpg";
 
 const AboutUs = () => {
   const values = [
@@ -29,7 +30,17 @@ const AboutUs = () => {
           <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
         </div>
 
-        <div className="bg-card rounded-2xl p-8 md:p-12 shadow-card border border-border/50">
+        <div className="bg-card rounded-2xl p-8 md:p-12 shadow-card border border-border/50 overflow-hidden">
+          {/* Image section */}
+          <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden mb-8">
+            <img 
+              src={aiAgentsImage} 
+              alt="AI Agents at Work" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+          </div>
+
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12">
             Somos a <span className="text-primary font-semibold">Orbitus Corp</span>. 
             Não entregamos softwares genéricos. Somos especialistas em{" "}

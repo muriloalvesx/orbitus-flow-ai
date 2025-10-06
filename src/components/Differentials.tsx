@@ -1,4 +1,5 @@
 import { Sparkles, CheckCircle2 } from "lucide-react";
+import automationImage from "@/assets/automation-success.jpg";
 
 const Differentials = () => {
   const differentials = [
@@ -56,8 +57,18 @@ const Differentials = () => {
             </div>
           </div>
 
-          <div className="bg-card rounded-2xl p-8 border border-border shadow-card">
-            <p className="text-lg text-center leading-relaxed">
+          <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-card">
+            {/* Image section */}
+            <div className="relative w-full h-64 overflow-hidden">
+              <img 
+                src={automationImage} 
+                alt="Automation Success" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/50 to-card" />
+            </div>
+
+            <p className="text-lg text-center leading-relaxed p-8">
               Não trabalhamos com pacotes fechados. Acreditamos que a verdadeira eficiência vem da{" "}
               <span className="text-primary font-semibold">personalização total</span>. 
               O escopo final dos seus Agentes de IA (como o CRM, criador de contratos ou Agente BDR) 

@@ -1,4 +1,4 @@
-import orbitusLogo from "@/assets/orbitus-logo.jpg";
+import orbitusLogo from "@/assets/orbitus-logo.png";
 
 const Footer = () => {
   return (

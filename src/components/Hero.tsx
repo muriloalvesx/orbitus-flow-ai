@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
-import orbitusLogo from "@/assets/orbitus-logo.jpg";
+import { ArrowRight, Sparkles, MessageCircle } from "lucide-react";
+import orbitusLogo from "@/assets/orbitus-logo.png";
+import heroImage from "@/assets/ai-automation-hero.jpg";
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -8,7 +9,17 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroImage} 
+          alt="AI Automation" 
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
+      </div>
+      
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
@@ -57,6 +68,21 @@ const Hero = () => {
             >
               Quero Agendar Minha Avaliação Gratuita
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <Button 
+              size="xl" 
+              variant="gradient"
+              asChild
+              className="group"
+            >
+              <a 
+                href="https://wa.me/551231974778?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consultoria%20gratuita!"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Falar no WhatsApp
+              </a>
             </Button>
           </div>
 
