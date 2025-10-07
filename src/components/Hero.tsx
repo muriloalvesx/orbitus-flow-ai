@@ -2,43 +2,38 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, MessageCircle } from "lucide-react";
 import orbitusLogo from "@/assets/orbitus-logo.png";
 import heroImage from "@/assets/ai-automation-hero.jpg";
-
 const Hero = () => {
   const scrollToForm = () => {
-    document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("contact-form")?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="AI Automation" 
-          className="w-full h-full object-cover opacity-30"
-        />
+        <img src={heroImage} alt="AI Automation" className="w-full h-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
       </div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-glow" style={{
+        animationDelay: "1.5s"
+      }} />
       </div>
 
       <div className="container relative z-10 px-4 py-20">
         <div className="flex flex-col items-center text-center space-y-8 max-w-5xl mx-auto">
           {/* Logo */}
           <div className="animate-fade-up">
-            <img 
-              src={orbitusLogo} 
-              alt="Orbitus Corp" 
-              className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl"
-            />
+            <img src={orbitusLogo} alt="Orbitus Corp" className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl" />
           </div>
 
           {/* Badge */}
-          <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-secondary border border-primary/20" style={{ animationDelay: "0.1s" }}>
+          <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-secondary border border-primary/20" style={{
+          animationDelay: "0.1s"
+        }}>
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-foreground">
               O Próximo Nível da Automação
@@ -46,7 +41,9 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="animate-fade-up text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight" style={{ animationDelay: "0.2s" }}>
+          <h1 className="animate-fade-up text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight" style={{
+          animationDelay: "0.2s"
+        }}>
             Ecossistemas de IA que Transformam sua{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Operação em uma Máquina de Lucro
@@ -54,32 +51,20 @@ const Hero = () => {
           </h1>
 
           {/* Sub-headline */}
-          <p className="animate-fade-up text-lg md:text-xl text-muted-foreground max-w-3xl" style={{ animationDelay: "0.3s" }}>
-            De clínicas a escritórios de advocacia, criamos Agentes de IA e automações que operam como funcionários de alta performance, 24/7.
-          </p>
+          <p className="animate-fade-up text-lg md:text-xl text-muted-foreground max-w-3xl" style={{
+          animationDelay: "0.3s"
+        }}>Criamos ecossistemas de IA que trabalham verdadeiramente como uma equipe de funcionários, 24/7 e de forma inteligente e otimizada.</p>
 
           {/* CTA Buttons */}
-          <div className="animate-fade-up flex flex-col sm:flex-row gap-4 w-full sm:w-auto" style={{ animationDelay: "0.4s" }}>
-            <Button 
-              size="xl" 
-              variant="hero"
-              onClick={scrollToForm}
-              className="group"
-            >
+          <div className="animate-fade-up flex flex-col sm:flex-row gap-4 w-full sm:w-auto" style={{
+          animationDelay: "0.4s"
+        }}>
+            <Button size="xl" variant="hero" onClick={scrollToForm} className="group">
               Quero Agendar Minha Avaliação Gratuita
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button 
-              size="xl" 
-              variant="gradient"
-              asChild
-              className="group"
-            >
-              <a 
-                href="https://wa.me/551231974778?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consultoria%20gratuita!"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <Button size="xl" variant="gradient" asChild className="group">
+              <a href="https://wa.me/551231974778?text=Ol%C3%A1%2C%20gostaria%20de%20marcar%20uma%20consultoria%20gratuita!" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Falar no WhatsApp
               </a>
@@ -87,7 +72,9 @@ const Hero = () => {
           </div>
 
           {/* Trust indicators */}
-          <div className="animate-fade-up flex flex-wrap justify-center gap-8 pt-8 text-sm text-muted-foreground" style={{ animationDelay: "0.5s" }}>
+          <div className="animate-fade-up flex flex-wrap justify-center gap-8 pt-8 text-sm text-muted-foreground" style={{
+          animationDelay: "0.5s"
+        }}>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-secondary" />
               <span>Personalização Total</span>
@@ -103,8 +90,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
