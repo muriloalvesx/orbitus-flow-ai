@@ -47,9 +47,9 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="animate-fade-up text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight" style={{ animationDelay: "0.2s" }}>
-            Ecossistemas de IA Customizados que Transformam sua{" "}
+            Ecossistemas de IA que Transformam sua{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Operação em Máquinas de Lucro
+              Operação em uma Máquina de Lucro
             </span>
           </h1>
 
