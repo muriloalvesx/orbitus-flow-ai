@@ -1,5 +1,5 @@
 import { Target, Zap, Shield } from "lucide-react";
-import aiAgentsImage from "@/assets/ai-agents-work.jpg";
+import aiEcosystemImage from "@/assets/ai-ecosystem-success.jpg";
 
 const AboutUs = () => {
   const values = [
@@ -34,8 +34,8 @@ const AboutUs = () => {
           {/* Image section */}
           <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden mb-8">
             <img 
-              src={aiAgentsImage} 
-              alt="AI Agents at Work" 
+              src={aiEcosystemImage} 
+              alt="Ecossistema de IA para Lucro e Sucesso" 
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
