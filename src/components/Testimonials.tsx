@@ -1,39 +1,27 @@
-import { Sparkles, TrendingUp, Clock, Users, Briefcase } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const Testimonials = () => {
-  const cases = [
+  const testimonials = [
     {
-      icon: Sparkles,
-      iconColor: "bg-gradient-to-br from-pink-500 to-purple-600",
-      category: "Clínica de Estética",
-      title: "Transformação Digital Completa",
-      metrics: [
-        { icon: TrendingUp, value: "+60%", label: "Novos agendamentos" },
-        { icon: Clock, value: "-5h", label: "Manual/semana" },
-      ],
-      description: "Landing page otimizada + CRM + automação de WhatsApp. Sistema integrado que conectou marketing, vendas e atendimento.",
+      name: "Dr. Alberto G.",
+      role: "Diretor Clínico",
+      company: "Clínica São José",
+      content: "A Orbitus reduziu em 40% nossas faltas. O Agente de Confirmação é incrivelmente humanizado e a reativação de pacientes está sendo um sucesso. Investimento que se pagou em 3 meses.",
+      rating: 5,
     },
     {
-      icon: TrendingUp,
-      iconColor: "bg-gradient-to-br from-blue-500 to-cyan-600",
-      category: "Santiago Piscinas",
-      title: "Automação de Vendas B2C",
-      metrics: [
-        { icon: Clock, value: "-8h", label: "Manual/semana" },
-        { icon: Users, value: "+45%", label: "Taxa de conversão" },
-      ],
-      description: "Site profissional + automação de orçamentos via n8n. Integração perfeita entre formulário web e CRM.",
+      name: "Dra. Renata C.",
+      role: "Advogada Sócia",
+      company: "Carvalho & Associados",
+      content: "O criador de petições e o suporte processual nos deram uma velocidade inédita. Nossos advogados focam no direito, e a IA da Orbitus cuida da gestão.",
+      rating: 5,
     },
     {
-      icon: Briefcase,
-      iconColor: "bg-gradient-to-br from-purple-500 to-indigo-600",
-      category: "Prestador de Serviços B2B",
-      title: "Software Customizado",
-      metrics: [
-        { icon: TrendingUp, value: "+120%", label: "Produtividade" },
-        { icon: Clock, value: "-15h", label: "Manual/semana" },
-      ],
-      description: "Sistema sob medida para gestão de projetos e equipes. Dashboard em tempo real com métricas estratégicas.",
+      name: "Marcos P.",
+      role: "CEO",
+      company: "TechStore E-commerce",
+      content: "A gestão de estoque e o pós-venda automatizado transformaram nossa operação. Nossos clientes estão mais engajados e as vendas aumentaram 60% em 6 meses.",
+      rating: 5,
     },
   ];
 
@@ -54,49 +42,38 @@ const Testimonials = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {cases.map((caseStudy, index) => {
-            const Icon = caseStudy.icon;
-            return (
-              <div 
-                key={index}
-                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-card hover:-translate-y-2"
-              >
-                <div className="space-y-6">
-                  {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl ${caseStudy.iconColor} flex items-center justify-center`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
+          {testimonials.map((testimonial, index) => (
+            <div 
+              key={index}
+              className="relative bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-card hover:-translate-y-2"
+            >
+              {/* Quote icon */}
+              <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-gradient-secondary flex items-center justify-center opacity-50">
+                <Quote className="w-6 h-6 text-primary" />
+              </div>
 
-                  {/* Category */}
-                  <p className="text-primary font-medium">{caseStudy.category}</p>
+              <div className="space-y-4">
+                {/* Rating */}
+                <div className="flex gap-1">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  ))}
+                </div>
 
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-foreground">
-                    {caseStudy.title}
-                  </h3>
+                {/* Content */}
+                <p className="text-muted-foreground leading-relaxed italic">
+                  "{testimonial.content}"
+                </p>
 
-                  {/* Metrics */}
-                  <div className="grid grid-cols-2 gap-4">
-                    {caseStudy.metrics.map((metric, metricIndex) => {
-                      const MetricIcon = metric.icon;
-                      return (
-                        <div key={metricIndex} className="space-y-2">
-                          <MetricIcon className="w-5 h-5 text-primary" />
-                          <p className="text-2xl font-bold text-foreground">{metric.value}</p>
-                          <p className="text-sm text-muted-foreground">{metric.label}</p>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed pt-4 border-t border-border">
-                    {caseStudy.description}
-                  </p>
+                {/* Author */}
+                <div className="pt-4 border-t border-border">
+                  <p className="font-semibold text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <p className="text-sm text-primary font-medium">{testimonial.company}</p>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
